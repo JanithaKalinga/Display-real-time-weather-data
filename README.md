@@ -1,7 +1,10 @@
 # Weather Data Dashboard
 Project Overview
+
 This project is a real-time Weather Monitoring Dashboard of a user provided location built using Node-RED and the OpenWeatherMap API. It provides live updates of critical weather parameters such as temperature, humidity, pressure, wind speed, and wind direction, all beautifully visualized through interactive gauges, charts, and text displays. The dashboard also allows users to set custom warning limits for each parameter and receive automatic notifications when limits are exceeded.
+
 Features
+
 🌡️ Temperature Monitoring:
 Displayed via a gauge (0–50°C) and a real-time line chart.
 
