@@ -1,9 +1,9 @@
 # Weather Data Dashboard
-Project Overview
+# Project Overview
 
 This project is a real-time Weather Monitoring Dashboard of a user provided location built using Node-RED and the OpenWeatherMap API. It provides live updates of critical weather parameters such as temperature, humidity, pressure, wind speed, and wind direction, all beautifully visualized through interactive gauges, charts, and text displays. The dashboard also allows users to set custom warning limits for each parameter and receive automatic notifications when limits are exceeded.
 
-Features
+# Features
 
 🌡️ Temperature Monitoring:
 Displayed via a gauge (0–50°C) and a real-time line chart.
@@ -41,8 +41,9 @@ Get instant visual and text notifications if any limit is exceeded.
 🔊 Voice Output:
 Weather description is audibly read out using Microsoft David (US English voice).
 
-Dashboard Sections
-Weather Tab:
+# Dashboard Sections
+
+# Weather Tab:
 
 Gauges for Temperature, Humidity, Pressure, Wind Speed.
 
@@ -52,7 +53,7 @@ Sunrise/Sunset Times.
 
 Weather Description.
 
-Settings Tab:
+# Settings Tab:
 
 Update the data refresh interval.
 
@@ -60,13 +61,13 @@ Switch between city/country or coordinates input.
 
 Enable/Disable charts.
 
-Charts Tab:
+# Charts Tab:
 
 Real-time line charts for Temperature, Humidity, and Wind Speed.
 
 Chart status display (Enabled/Disabled).
 
-How it Works
+# How it Works
 Weather Data Fetching:
 Weather data is fetched from OpenWeatherMap at the user-defined intervals.
 
