@@ -1,0 +1,1722 @@
+[
+    {
+        "id": "f1b1c1a0.1b1c1",
+        "type": "tab",
+        "label": "Weather App",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b2c3d4e5.1f2g3h",
+        "type": "openweathermap",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "OpenWeatherMap",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "",
+        "country": "",
+        "language": "en",
+        "x": 710,
+        "y": 480,
+        "wires": [
+            [
+                "a0f6dd860809d00c",
+                "6a10488f508bf73f",
+                "71220716bcb56b0e",
+                "d8fb11354fa57fd5",
+                "242a89089f713d8f",
+                "4c8ec51dc065a43e",
+                "045bbd9a79583306",
+                "11c14437edbddb75"
+            ]
+        ]
+    },
+    {
+        "id": "d4e5f6g7.1h2i3j",
+        "type": "ui_gauge",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Temperature Gauge",
+        "group": "c232763f31cfa1ba",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperature (°C)",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#00b300",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 1280,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "bc2227b282342f39",
+        "type": "ui_dropdown",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "label": "Location Mode",
+        "tooltip": "Select option",
+        "place": "Select option",
+        "group": "e9b9487cf0f6d0eb",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "City",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "Coordinates",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "location",
+        "topicType": "msg",
+        "className": "",
+        "x": 140,
+        "y": 1340,
+        "wires": [
+            [
+                "10f61552adb94756"
+            ]
+        ]
+    },
+    {
+        "id": "26ed3b75957c364f",
+        "type": "ui_gauge",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "group": "69321d987eec9965",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "gtype": "wave",
+        "title": "Humidity (%)",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1210,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "069d1ee4ff2a6a70",
+        "type": "ui_gauge",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Pressure",
+        "group": "580b4e70a9c2e70d",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "gtype": "wave",
+        "title": "Pressure (atm)",
+        "label": "atm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1.5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1380,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "92a9b2fb2934f0f8",
+        "type": "ui_gauge",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Wind Speed",
+        "group": "6beea2fe4b539d39",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Wind Speed",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "25",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "8",
+        "seg2": "16",
+        "diff": false,
+        "className": "",
+        "x": 1390,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7275aa058d779912",
+        "type": "ui_text",
+        "z": "f1b1c1a0.1b1c1",
+        "group": "542b8d94457963bc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Sunrise",
+        "label": "Sunrise",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1240,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "01b1e4af9fffa5e8",
+        "type": "ui_text",
+        "z": "f1b1c1a0.1b1c1",
+        "group": "542b8d94457963bc",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Sunset",
+        "label": "Sunset",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1240,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "648e5cba2de9699d",
+        "type": "ui_text",
+        "z": "f1b1c1a0.1b1c1",
+        "group": "542b8d94457963bc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Description",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#000000",
+        "x": 1250,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a0f6dd860809d00c",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 35",
+        "func": "return [\n    { payload: msg.payload.description }\n];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 640,
+        "wires": [
+            [
+                "648e5cba2de9699d",
+                "1b4b245375a41739"
+            ]
+        ]
+    },
+    {
+        "id": "6a10488f508bf73f",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 36",
+        "func": "return [\n    { payload: new Date(msg.payload.sunset * 1000).toLocaleTimeString() }   // Output 7: Sunset Time\n];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 600,
+        "wires": [
+            [
+                "01b1e4af9fffa5e8"
+            ]
+        ]
+    },
+    {
+        "id": "71220716bcb56b0e",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 37",
+        "func": "return [\n    { payload: new Date(msg.payload.sunrise * 1000).toLocaleTimeString() }, // Output 6: Sunrise Time\n    \n];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 560,
+        "wires": [
+            [
+                "7275aa058d779912"
+            ]
+        ]
+    },
+    {
+        "id": "1b4b245375a41739",
+        "type": "ui_audio",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Description",
+        "group": "542b8d94457963bc",
+        "voice": "Microsoft David - English (United States)",
+        "always": "",
+        "x": 1250,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f2d4a97d75fb6d8f",
+        "type": "ui_numeric",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "label": "Refresh Interval",
+        "tooltip": "",
+        "group": "236e692a5bad8815",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "refreshInterval",
+        "topicType": "msg",
+        "format": "{{value}} seconds",
+        "min": "1",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 140,
+        "y": 1160,
+        "wires": [
+            [
+                "98dc4797bda6ec89"
+            ]
+        ]
+    },
+    {
+        "id": "98dc4797bda6ec89",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 38",
+        "func": "// Store the refresh interval in the flow context\nflow.set(\"refreshInterval\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e472c7dc7a026fa",
+        "type": "inject",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.00001",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 480,
+        "wires": [
+            [
+                "159322f04435ab2a"
+            ]
+        ]
+    },
+    {
+        "id": "159322f04435ab2a",
+        "type": "trigger",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-30",
+        "extend": false,
+        "overrideDelay": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "b2c3d4e5.1f2g3h"
+            ]
+        ]
+    },
+    {
+        "id": "d8fb11354fa57fd5",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tempc",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 320,
+        "wires": [
+            [
+                "d4e5f6g7.1h2i3j"
+            ]
+        ]
+    },
+    {
+        "id": "242a89089f713d8f",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 380,
+        "wires": [
+            [
+                "26ed3b75957c364f"
+            ]
+        ]
+    },
+    {
+        "id": "4c8ec51dc065a43e",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Pressure",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.pressure",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 420,
+        "wires": [
+            [
+                "75722bee1521b411"
+            ]
+        ]
+    },
+    {
+        "id": "045bbd9a79583306",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Wind speed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.windspeed",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 460,
+        "wires": [
+            [
+                "fd684f9df0121ab9"
+            ]
+        ]
+    },
+    {
+        "id": "11c14437edbddb75",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Wind Direction",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.winddirection",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 500,
+        "wires": [
+            [
+                "94150a30a89d312f"
+            ]
+        ]
+    },
+    {
+        "id": "ed21c07d05725b47",
+        "type": "ui_button",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "group": "236e692a5bad8815",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 140,
+        "y": 720,
+        "wires": [
+            [
+                "2109f85c11efc2fe"
+            ]
+        ]
+    },
+    {
+        "id": "2109f85c11efc2fe",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 39",
+        "func": "let refreshTime1 = flow.get(\"refreshInterval\");\n// Convert seconds to milliseconds\nmsg.delay = refreshTime1 * 1000;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 720,
+        "wires": [
+            [
+                "159322f04435ab2a"
+            ]
+        ]
+    },
+    {
+        "id": "94150a30a89d312f",
+        "type": "ui_template",
+        "z": "f1b1c1a0.1b1c1",
+        "group": "6beea2fe4b539d39",
+        "name": "Wind Direction",
+        "order": 2,
+        "width": 6,
+        "height": 3,
+        "format": "<div style=\"text-align: center;\">\n    <svg width=\"120\" height=\"120\" viewBox=\"0 0 100 100\">\n        <!-- Wind Arrow -->\n        <polygon points=\"50,10 60,40 50,30 40,40\" fill=\"blue\" id=\"windArrow\" />\n        <!-- Compass Circle -->\n        <circle cx=\"50\" cy=\"50\" r=\"45\" stroke=\"black\" stroke-width=\"2\" fill=\"none\" />\n        <text x=\"45\" y=\"15\" font-size=\"12\">N</text>\n        <text x=\"85\" y=\"55\" font-size=\"12\">E</text>\n        <text x=\"45\" y=\"95\" font-size=\"12\">S</text>\n        <text x=\"5\" y=\"55\" font-size=\"12\">W</text>\n    </svg>\n    <p>Wind Direction: <span id=\"windText\">0°</span></p>\n</div>\n\n<script>\n    (function(scope) {\n        scope.$watch('msg.payload', function(direction) {\n            if (direction !== undefined) {\n                document.getElementById(\"windArrow\").setAttribute(\"transform\", `rotate(${direction}, 50, 50)`);\n                document.getElementById(\"windText\").innerText = direction + '°';\n            }\n        });\n    })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1260,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64bcff0f530ec171",
+        "type": "ui_chart",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "group": "5022a3568a7ca81b",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "label": "Temperature (°C)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1530,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "562b2ceabf8c181b",
+        "type": "ui_chart",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "group": "2dfdb5ba3abafb33",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "label": "Humidity (%)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1530,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25040e2b217b4801",
+        "type": "ui_chart",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "group": "cd0153010ae925d6",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "label": "Wind Speed (km/h)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "25",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1630,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb76c35d12ad6e40",
+        "type": "inject",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "36957c9221e25494"
+            ]
+        ]
+    },
+    {
+        "id": "36957c9221e25494",
+        "type": "openweathermap",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "OpenWeatherMap",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "",
+        "country": "",
+        "language": "en",
+        "x": 810,
+        "y": 120,
+        "wires": [
+            [
+                "4d8611c1e904ebe3"
+            ]
+        ]
+    },
+    {
+        "id": "ccbd3d8e621046b4",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tempc",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 60,
+        "wires": [
+            [
+                "64bcff0f530ec171",
+                "0afd71f07be37adb"
+            ]
+        ]
+    },
+    {
+        "id": "4ed772b7b3d2904e",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 120,
+        "wires": [
+            [
+                "562b2ceabf8c181b",
+                "cecc62f8111ecdc7"
+            ]
+        ]
+    },
+    {
+        "id": "9bd3d6c9e37129a4",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Wind speed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.windspeed",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 180,
+        "wires": [
+            [
+                "f63d79110e459c7f"
+            ]
+        ]
+    },
+    {
+        "id": "f63d79110e459c7f",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 41",
+        "func": "let windspeedms;\n\nif (typeof msg.payload === \"number\") {\n    windspeedms = msg.payload;\n} else if (typeof msg.payload.windspeed === \"number\") {\n    windspeedms = msg.payload.windspeed;\n} else {\n    node.warn(\"Invalid wind speed value: \" + msg.payload);\n    return msg;\n}\n\n// Convert wind speed from m/s to km/h\nlet windspeedkmh1 = windspeedms * 3.6;\n\n// Round to 2 decimal places (best for precision)\nmsg.payload = Math.round(windspeedkmh1 * 100) / 100;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 180,
+        "wires": [
+            [
+                "25040e2b217b4801"
+            ]
+        ]
+    },
+    {
+        "id": "4d8611c1e904ebe3",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 42",
+        "func": "let chartsEnabled = flow.get(\"chart_enabled\") || false;\nif (chartsEnabled === true) {\n    return msg;\n} else {\n    node.warn(\"Charts are disabled. No data sent.\");\n    return null;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 120,
+        "wires": [
+            [
+                "ccbd3d8e621046b4",
+                "4ed772b7b3d2904e",
+                "9bd3d6c9e37129a4",
+                "14d81921fd2083a5"
+            ]
+        ]
+    },
+    {
+        "id": "ddd55634dd1bc9c4",
+        "type": "ui_button",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "group": "g1h2i3j4.1k2l3m",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "cc9a1b235e8ef7c6"
+            ]
+        ]
+    },
+    {
+        "id": "d904073576ad35c9",
+        "type": "ui_text_input",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Country",
+        "label": "Country",
+        "tooltip": "",
+        "group": "g1h2i3j4.1k2l3m",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "300",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "46dab0d70a5c4f77"
+            ]
+        ]
+    },
+    {
+        "id": "982565acbda4dd1d",
+        "type": "ui_text_input",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "City",
+        "label": "City",
+        "tooltip": "",
+        "group": "g1h2i3j4.1k2l3m",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "300",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "c411ed6e802caef4"
+            ]
+        ]
+    },
+    {
+        "id": "46dab0d70a5c4f77",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 32",
+        "func": "flow.set(\"country\", msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c411ed6e802caef4",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 33",
+        "func": "flow.set(\"city\", msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc9a1b235e8ef7c6",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 34",
+        "func": "let country1 = flow.get(\"country\");\nlet city1 = flow.get(\"city\");\n\n\nreturn {\n    location: {\n        city: city1,\n        country: country1\n    }\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 180,
+        "wires": [
+            [
+                "b2c3d4e5.1f2g3h",
+                "36957c9221e25494",
+                "b9132f15fef599f7"
+            ]
+        ]
+    },
+    {
+        "id": "75722bee1521b411",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 44",
+        "func": "let hectopascals;\n\nif (typeof msg.payload === \"number\") {\n    hectopascals = msg.payload;\n} else if (typeof msg.payload.pressure === \"number\") {\n    hectopascals = msg.payload.pressure;\n} else {\n    node.warn(\"Invalid pressure value: \" + msg.payload);\n    return msg;\n}\n\n// Convert pressure from hPa to atm\nlet atmpressure = hectopascals / 1013;\n\n// Send only atm pressure value for the graph\nmsg.payload = atmpressure;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 420,
+        "wires": [
+            [
+                "069d1ee4ff2a6a70"
+            ]
+        ]
+    },
+    {
+        "id": "10f61552adb94756",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "locationMode",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd684f9df0121ab9",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 47",
+        "func": "let windspeedms;\n\nif (typeof msg.payload === \"number\") {\n    windspeedms = msg.payload;\n} else if (typeof msg.payload.windspeed === \"number\") {\n    windspeedms = msg.payload.windspeed;\n} else {\n    node.warn(\"Invalid pressure value: \" + msg.payload);\n    return msg;\n}\n\n// Convert pressure from hPa to atm\nlet windspeedkmh = windspeedms * 3.6;\n\n// Send only atm pressure value for the graph\nmsg.payload = windspeedkmh;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 460,
+        "wires": [
+            [
+                "92a9b2fb2934f0f8"
+            ]
+        ]
+    },
+    {
+        "id": "14d81921fd2083a5",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Pressure",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.pressure",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 20,
+        "wires": [
+            [
+                "ed9151516f3c59ed"
+            ]
+        ]
+    },
+    {
+        "id": "ed9151516f3c59ed",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 48",
+        "func": "let hectopascals;\n\nif (typeof msg.payload === \"number\") {\n    hectopascals = msg.payload;\n} else if (typeof msg.payload.pressure === \"number\") {\n    hectopascals = msg.payload.pressure;\n} else {\n    node.warn(\"Invalid pressure value: \" + msg.payload);\n    return msg;\n}\n\n// Convert pressure from hPa to atm\nlet atmpressure1 = hectopascals / 1013;\n\n// Send only atm pressure value for the graph\nmsg.payload = atmpressure1;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1790,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fdb51f9c2169e7df",
+        "type": "ui_dropdown",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "label": "Warning",
+        "tooltip": "Select option",
+        "place": "Select option",
+        "group": "962aa3c30e99b9b9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Temperature",
+                "value": "Temperature",
+                "type": "str"
+            },
+            {
+                "label": "Pressure",
+                "value": "Pressure",
+                "type": "str"
+            },
+            {
+                "label": "Humidity",
+                "value": "Humidity",
+                "type": "str"
+            },
+            {
+                "label": "Wind Speed",
+                "value": "Wind Speed",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 140,
+        "y": 980,
+        "wires": [
+            [
+                "27bc1161b0b86af0"
+            ]
+        ]
+    },
+    {
+        "id": "27bc1161b0b86af0",
+        "type": "ui_template",
+        "z": "f1b1c1a0.1b1c1",
+        "group": "962aa3c30e99b9b9",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .custom-slider-container {\n        display: flex;\n        align-items: center;\n        flex-direction: column;\n        width: 100%;\n        margin-top: 10px;\n    }\n\n    .custom-slider {\n        width: 100%;\n        appearance: none;\n        height: 8px;\n        background: #ddd;\n        border-radius: 5px;\n        outline: none;\n    }\n\n    .custom-slider::-webkit-slider-thumb {\n        appearance: none;\n        width: 20px;\n        height: 20px;\n        background: #008CBA;\n        border-radius: 50%;\n        cursor: pointer;\n        position: relative;\n    }\n\n    .slider-value {\n        margin-bottom: 10px;\n        background: #008CBA;\n        color: white;\n        padding: 4px 8px;\n        border-radius: 5px;\n        font-size: 14px;\n        text-align: center;\n    }\n\n    #warningSlider {\n        display: block !important;\n        visibility: visible !important;\n    }\n</style>\n\n<div class=\"custom-slider-container\">\n    <div class=\"slider-value\" id=\"sliderValue\">25</div>\n    <input type=\"range\" id=\"warningSlider\" class=\"custom-slider\" min=\"0\" max=\"50\" step=\"1\" value=\"25\">\n</div>\n\n<script>\n    (function(scope) {\n        let slider = document.getElementById(\"warningSlider\");\n        let sliderValue = document.getElementById(\"sliderValue\");\n\n        if (!slider) {\n            console.error(\"Slider not found! Check your HTML structure.\");\n            return;\n        }\n\n        scope.warningLimits = scope.warningLimits || {}; \n\n        function updateSliderRange(parameter) {\n            console.log(\"Selected Parameter:\", parameter);\n\n            let lastSetValue = scope.warningLimits[parameter] || null;\n\n            if (parameter === \"Temperature\") {\n                slider.min = -10;\n                slider.max = 50;\n                slider.step = 1;\n                slider.value = lastSetValue !== null ? lastSetValue : 25;\n            } else if (parameter === \"Pressure\") {\n                slider.min = 0.8;\n                slider.max = 1.5;\n                slider.step = 0.1;\n                slider.value = lastSetValue !== null ? lastSetValue : 1.0;\n            } else if (parameter === \"Humidity\") {\n                slider.min = 0;\n                slider.max = 100;\n                slider.step = 1;\n                slider.value = lastSetValue !== null ? lastSetValue : 50;\n            } else if (parameter === \"Wind Speed\") {\n                slider.min = 0;\n                slider.max = 80;\n                slider.step = 1;\n                slider.value = lastSetValue !== null ? lastSetValue : 20;\n            }\n\n            slider.style.display = \"block\"; \n            slider.style.visibility = \"visible\"; \n            sliderValue.innerText = slider.value;\n        }\n\n        slider.oninput = function() {\n            sliderValue.innerText = this.value;\n            scope.warningLimits[scope.selectedParameter] = Number(this.value);\n            scope.send({\n                topic: scope.selectedParameter,\n                payload: Number(this.value)\n            });\n        };\n\n        scope.$watch('msg.payload', function(value) {\n            if (value) {\n                scope.selectedParameter = value;\n                updateSliderRange(value);\n            }\n        });\n\n    })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 380,
+        "y": 980,
+        "wires": [
+            [
+                "322f42398271183e"
+            ]
+        ]
+    },
+    {
+        "id": "322f42398271183e",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 45",
+        "func": "// Retrieve existing warning limits or initialize an empty object\nlet warningLimits = flow.get(\"warningLimits\") || {};\n\n// Ensure msg.topic is a valid string and msg.payload is a valid number\nif (typeof msg.topic === \"string\" && typeof msg.payload === \"number\") {\n    warningLimits[msg.topic] = msg.payload; // Store only the number\n    flow.set(\"warningLimits\", warningLimits); // Save updated object\n} else {\n    node.warn(\"Invalid data received. Topic: \" + msg.topic + \", Payload: \" + JSON.stringify(msg.payload));\n}\n\n// Debugging: Show the correctly structured object\nnode.warn(\"Updated Warning Limits: \" + JSON.stringify(warningLimits, null, 2));\n\n// Ensure msg.payload contains the correct object\nmsg.payload = warningLimits;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 980,
+        "wires": [
+            [
+                "8ba4476cf5ac575e"
+            ]
+        ]
+    },
+    {
+        "id": "8ba4476cf5ac575e",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 46",
+        "func": "// Retrieve stored warning limits and current weather data\nlet warningLimits = flow.get(\"warningLimits\") || {};\nlet weatherData = flow.get(\"weatherData\") || {};\n\n// Ensure weather data exists\nif (!weatherData || Object.keys(weatherData).length === 0) {\n    node.warn(\"No weather data available.\");\n    return null;\n}\n\nlet notifications = [];\n\n// Compare each weather parameter with its warning limit\nif (warningLimits.Temperature !== undefined && weatherData.tempc > warningLimits.Temperature) {\n    let diff = weatherData.tempc - warningLimits.Temperature;\n    notifications.push(`⚠️ Warning! Temperature is ${weatherData.tempc}°C. Exceeds limit by ${diff.toFixed(1)}°C.`);\n}\n\nif (warningLimits.Pressure !== undefined) {\n    let atmPressure = weatherData.pressure / 1013; // Convert hPa to atm\n    if (atmPressure > warningLimits.Pressure) {\n        let diff = atmPressure - warningLimits.Pressure;\n        notifications.push(`⚠️ Warning! Pressure is ${atmPressure.toFixed(2)} atm. Exceeds limit by ${diff.toFixed(2)} atm.`);\n    }\n}\n\nif (warningLimits.Humidity !== undefined && weatherData.humidity > warningLimits.Humidity) {\n    let diff = weatherData.humidity - warningLimits.Humidity;\n    notifications.push(`⚠️ Warning! Humidity is ${weatherData.humidity}%. Exceeds limit by ${diff}%.`);\n}\n\nif (warningLimits[\"Wind Speed\"] !== undefined && weatherData.windspeed > warningLimits[\"Wind Speed\"]) {\n    let diff = weatherData.windspeed - warningLimits[\"Wind Speed\"];\n    notifications.push(`⚠️ Warning! Wind Speed is ${weatherData.windspeed} km/h. Exceeds limit by ${diff.toFixed(1)} km/h.`);\n}\n\n// If any warnings exist, send them as a notification\nif (notifications.length > 0) {\n    msg.payload = notifications.join(\"\\n\"); // Send all warnings in one message\n    return msg;\n} else {\n    return null; // No warnings, no need to send a message\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 980,
+        "wires": [
+            [
+                "07e7637212297787"
+            ]
+        ]
+    },
+    {
+        "id": "07e7637212297787",
+        "type": "ui_text",
+        "z": "f1b1c1a0.1b1c1",
+        "group": "2c700b6dd6f8d106",
+        "order": 1,
+        "width": 8,
+        "height": 3,
+        "name": "",
+        "label": "Notification",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1370,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "18a9b10e1510471e",
+        "type": "inject",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "props": [],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 390,
+        "y": 1060,
+        "wires": [
+            [
+                "322f42398271183e"
+            ]
+        ]
+    },
+    {
+        "id": "0afd71f07be37adb",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 51",
+        "func": "flow.set(\"tempc1\",msg.payload.tempc);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1930,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cecc62f8111ecdc7",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 52",
+        "func": "flow.set(\"humidity1\",msg.payload.humidity);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9c3ab1edb6c17da",
+        "type": "ui_switch",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "label": "Enable Charts",
+        "tooltip": "",
+        "group": "be80b47d793bccb9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "chart_enabled",
+        "topicType": "flow",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 140,
+        "y": 1260,
+        "wires": [
+            [
+                "fa8b4fba06263552"
+            ]
+        ]
+    },
+    {
+        "id": "fa8b4fba06263552",
+        "type": "change",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "Charts Enable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "chart_enabled",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 1260,
+        "wires": [
+            [
+                "d174a79a151b534b"
+            ]
+        ]
+    },
+    {
+        "id": "28ed7f947bdae037",
+        "type": "ui_text",
+        "z": "f1b1c1a0.1b1c1",
+        "group": "214bf2168408804d",
+        "order": 1,
+        "width": 24,
+        "height": 1,
+        "name": "",
+        "label": "Chart Enbled or Disabled:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 890,
+        "y": 1260,
+        "wires": [],
+        "info": "<style>\r\n#ChartsUpdateGroup {\r\n    text-align: center;\r\n    margin: 0 auto;\r\n    width: 100%;\r\n}\r\n</style>\r\n"
+    },
+    {
+        "id": "d174a79a151b534b",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 43",
+        "func": "// Get chart status (default to false if not set)\nlet chartsEnabled1 = flow.get(\"chart_enabled\") || false;\n\n// Convert status to text\nlet statusMessage = chartsEnabled1 ? \"Charts Enabled ✅\" : \"Charts Disabled ❌\";\n\n// Output the message\nreturn { payload: statusMessage };\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1260,
+        "wires": [
+            [
+                "28ed7f947bdae037"
+            ]
+        ]
+    },
+    {
+        "id": "6f3b17ddb3fecc56",
+        "type": "function",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "function 53",
+        "func": "// Store real-time weather data in flow context\nflow.set(\"weatherData\", msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 820,
+        "wires": [
+            [
+                "8ba4476cf5ac575e"
+            ]
+        ]
+    },
+    {
+        "id": "b9132f15fef599f7",
+        "type": "openweathermap",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "OpenWeatherMap",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "",
+        "country": "",
+        "language": "en",
+        "x": 730,
+        "y": 820,
+        "wires": [
+            [
+                "6f3b17ddb3fecc56"
+            ]
+        ]
+    },
+    {
+        "id": "afba1c19ac1e34fa",
+        "type": "inject",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.00001",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 820,
+        "wires": [
+            [
+                "beba34c8ebc66e5c"
+            ]
+        ]
+    },
+    {
+        "id": "beba34c8ebc66e5c",
+        "type": "trigger",
+        "z": "f1b1c1a0.1b1c1",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-1",
+        "extend": false,
+        "overrideDelay": true,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 440,
+        "y": 820,
+        "wires": [
+            [
+                "b9132f15fef599f7"
+            ]
+        ]
+    },
+    {
+        "id": "c232763f31cfa1ba",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "t1u2v3w4.1x2y3z",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e9b9487cf0f6d0eb",
+        "type": "ui_group",
+        "name": "Input Method",
+        "tab": "debeabb08cdcc808",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "69321d987eec9965",
+        "type": "ui_group",
+        "name": "Humidity",
+        "tab": "t1u2v3w4.1x2y3z",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "580b4e70a9c2e70d",
+        "type": "ui_group",
+        "name": "Pressure",
+        "tab": "t1u2v3w4.1x2y3z",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6beea2fe4b539d39",
+        "type": "ui_group",
+        "name": "Wind",
+        "tab": "t1u2v3w4.1x2y3z",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "542b8d94457963bc",
+        "type": "ui_group",
+        "name": "Description",
+        "tab": "t1u2v3w4.1x2y3z",
+        "order": 8,
+        "disp": true,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "236e692a5bad8815",
+        "type": "ui_group",
+        "name": "Update Time Interval",
+        "tab": "debeabb08cdcc808",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5022a3568a7ca81b",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "73c607d585952fb4",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2dfdb5ba3abafb33",
+        "type": "ui_group",
+        "name": "Humidity (%)",
+        "tab": "73c607d585952fb4",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cd0153010ae925d6",
+        "type": "ui_group",
+        "name": "Wind Speed (km/h)",
+        "tab": "73c607d585952fb4",
+        "order": 4,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "g1h2i3j4.1k2l3m",
+        "type": "ui_group",
+        "name": "Input City/Country",
+        "tab": "t1u2v3w4.1x2y3z",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "962aa3c30e99b9b9",
+        "type": "ui_group",
+        "name": "Warning Limits",
+        "tab": "t1u2v3w4.1x2y3z",
+        "order": 2,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2c700b6dd6f8d106",
+        "type": "ui_group",
+        "name": "Notification",
+        "tab": "t1u2v3w4.1x2y3z",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "be80b47d793bccb9",
+        "type": "ui_group",
+        "name": "Charts Enable",
+        "tab": "debeabb08cdcc808",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "214bf2168408804d",
+        "type": "ui_group",
+        "name": "Charts Update ON/OFF",
+        "tab": "73c607d585952fb4",
+        "order": 1,
+        "disp": true,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "t1u2v3w4.1x2y3z",
+        "type": "ui_tab",
+        "name": "Weather",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "debeabb08cdcc808",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "73c607d585952fb4",
+        "type": "ui_tab",
+        "name": "Charts",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
